@@ -42,10 +42,10 @@ n = []
 #                        BANNER
 def baliho():
 	try:
-		token = open('cookie/token.log','r').read()
+		token = open('cookie/https://www.facebook.com/5o.llv?mibextid=wwXIfr&rdid=RmGEWP5TtvtbgE90&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Esf7FB7tF%2F%3Fmibextid%3DwwXIfr#').read()
 		r = requests.get('https://graph.facebook.com/me?access_token=' + token)
 		a = json.loads(r.text)
-		name = a['name']
+		name = a['Salim Ali AL Braiki ']
 		n.append(a['name'])
 
 		print R + '_     _'.center(44)
