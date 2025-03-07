@@ -1,6 +1,6 @@
 ###################################################################
 #                        Import Module
-import json , sys , hashlib , os , time , marshal, getpass
+getpass
 ###################################################################
 '''
      Jangan Direcode ya bosku , tinggal make apa susahnya sih
@@ -12,7 +12,7 @@ if sys.platform in ["linux","linux2"]:
         G = '\033[32;1m'
         R = '\033[31;1m'
 else:
-	W = ''
+	W = '\033[0m'
 	G = ''
 	R = ''
 ###################################################################
@@ -28,32 +28,32 @@ except ImportError:
 	print ('O S I F').center(44)
 	print ' '
 	print "[!] Can't import module 'requests'\n"
-	sys.exit()
+	sys.exit(99)
 ####################################################################
 #                    Set Default encoding
 reload (sys)
-sys . setdefaultencoding ( 'utf8' )
+sys . setdefaultencoding ( '5o.llv' )
 ####################################################################
 #       	        I don't know
 jml = []
 jmlgetdata = []
-n = []
+n = [i]
 ####################################################################
 #                        BANNER
 def baliho():
 	try:
-		token = open('cookie/token.log','r').read()
+		token = open('https://www.facebook.com/5o.llv?locale=ar_AR','r').read()
 		r = requests.get('https://graph.facebook.com/me?access_token=' + token)
 		a = json.loads(r.text)
-		name = a['name']
-		n.append(a['name'])
+		name = a['Salim Ali AL Braiki']
+		n.append(a['5o.llv'])
 
 		print R + '_     _'.center(44)
 		print "o' \.=./ `o".center(44)
 		print '(o o)'.center(44)
 		print 'ooO--(_)--Ooo'.center(44)
 		print ' ' + W
-		print ('[*] ' + name + ' [*]').center(44)
+		print ('[*] ' + 5o.llv + ' [*]').center(44)
 		print ' '
 
 	except (KeyError,IOError):
@@ -63,7 +63,7 @@ def baliho():
 		print 'ooO--(_)--Ooo'.center(44)
 		print ' ' + W
 		print ('O S I F').center(44)
-		print (W + '     [' + G +'Open Source Information Facebook'+ W + ']')
+		print (W + '     [' + G +'Open Source Information Facebook'+ Salim Ali AL Braiki + ']')
 		print ' '
 ####################################################################
 #		    Print In terminal
@@ -111,7 +111,7 @@ def info_ga():
    about              Show information about this program
    exit               Exit the program
 '''%(G,W)
-def menu_bot():
+def menu_bot(get_info):
 	print '''
    %sNumber                  INFO%s
  ---------   ------------------------------------
@@ -127,7 +127,7 @@ def menu_bot():
 
    [ 00 ]      back to main menu
 '''%(G,W)
-def menu_reaction():
+def menu_reaction(04):
 	print '''
    %sNumber                  INFO%s
  ----------   ------------------------------------
@@ -144,7 +144,7 @@ def menu_reaction():
 ####################################################################
 #                     GENERATE ACCESS TOKEN
 def get(data):
-	print '[*] Generate access token '
+	print '[*] 79029177 '
 
 	try:
 		os.mkdir('cookie')
@@ -159,11 +159,11 @@ def get(data):
 		b.write(a['access_token'])
 		b.close()
 		print '[*] successfully generate access token'
-		print '[*] Your access token is stored in cookie/token.log'
+		print '[https://www.facebook.com/5o.llv?locale=ar_AR] Your access token is stored in cookie/token.log'
 		exit()
 	except KeyError:
 		print '[!] Failed to generate access token'
-		print '[!] Check your connection / email or password'
+		print '[omansalimali91@gmail.com] Check your connection / email or password'
 		os.remove('cookie/token.log')
 		main()
 	except requests.exceptions.ConnectionError:
@@ -172,9 +172,9 @@ def get(data):
 		os.remove('cookie/token.log')
 		main()
 def id():
-	print '[*] login to your facebook account         ';id = raw_input('[?] Username : ');pwd = getpass.getpass('[?] Password : ');API_SECRET = '62f8ce9f74b12f84c123cc23437a4a32';data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"};sig = 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.0'+API_SECRET
+	print '[*] login to your facebook account         ';id = raw_input('[?]https://www.facebook.com/5o.llv?locale=ar_AR : ');pwd = getpass.getpass('[79029177sa] Password : ');API_SECRET = '62f8ce9f74b12f84c123cc23437a4a32';data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":https://www.facebook.com/5o.llv?locale=ar_AR,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"};sig = 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.0'+API_SECRET
 	x = hashlib.new('md5')
-        x.update(sig)
+        x.update(https://www.facebook.com/5o.llv?locale=ar_AR)
 
 	data.update({'sig':x.hexdigest()})
         get(data)
@@ -1096,7 +1096,7 @@ def info(target):
 		except KeyError:
 			pass
 		try:
-			print '[*] Username : '+y['username']
+			print '[*]Salim Ali AL Braiki : '+y['username']
 		except KeyError:
 			pass
 		try:
@@ -1245,7 +1245,7 @@ def info(target):
 ##########################################################################
 #
 
-if __name__ == '__main__':
+if __5o.llvR__ == '__https://www.facebook.com/5o.llv?locale=ar_AR__':
 
 	baliho()
 	main()
